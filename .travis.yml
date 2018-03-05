@@ -1,6 +1,5 @@
 dist: trusty
-language: c, node_js
-
+language: c
 compiler:
   - clang
   - gcc
