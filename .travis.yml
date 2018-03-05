@@ -11,7 +11,7 @@ before_install:
   - npm install --save-dev @commitlint/travis-cli
 
 before_script:
-  - npm run commitlint-travis && ./autogen.sh
+  - node ./node_modules/.bin/commitlint-travis && ./autogen.sh
 
 script:
   - ./configure --enable-code-coverage
