@@ -10,10 +10,10 @@ before_install:
   - pip install --user cpp-coveralls
   - npm install --save-dev @commitlint/travis-cli
 
-before_script: ./autogen.sh
+before_script:
+  - npm run commitlint-travis && ./autogen.sh
 
 script:
-  - commitlint-travis
   - ./configure --enable-code-coverage
   - make
   - make check
